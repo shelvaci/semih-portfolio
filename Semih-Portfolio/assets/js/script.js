@@ -405,31 +405,77 @@ if (statsSection) {
   statsObserver.observe(statsSection);
 }
 
-// Contact form validation with frontend-only success feedback.
-contactForm.addEventListener("submit", (event) => {
+function encodeFormData(form) {
+  return new URLSearchParams(new FormData(form)).toString();
+}
+
+// Contact form validation and Netlify Forms submission.
+contactForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const message = document.getElementById("message").value.trim();
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const submitButton = contactForm.querySelector('button[type="submit"]');
 
   if (!name || !email || !message) {
-    formMessage.textContent = currentLanguage === "tr" ? "Lütfen göndermeden önce tüm alanları doldur." : "Please complete all fields before sending.";
+    formMessage.textContent =
+      currentLanguage === "tr"
+        ? "Lütfen göndermeden önce tüm alanları doldur."
+        : "Please complete all fields before sending.";
     formMessage.style.color = "#ff7adf";
     return;
   }
 
   if (!emailPattern.test(email)) {
-    formMessage.textContent = currentLanguage === "tr" ? "Lütfen geçerli bir email adresi gir." : "Please enter a valid email address.";
+    formMessage.textContent =
+      currentLanguage === "tr"
+        ? "Lütfen geçerli bir email adresi gir."
+        : "Please enter a valid email address.";
     formMessage.style.color = "#ff7adf";
     return;
   }
 
-  formMessage.textContent = currentLanguage === "tr" ? "İletim başarılı. En kısa zamanda dönüş yapacağım." : "Transmission successful. I will reply soon.";
-  formMessage.style.color = "#44ffb7";
-  contactForm.reset();
+  try {
+    submitButton.disabled = true;
+    formMessage.textContent =
+      currentLanguage === "tr" ? "Mesaj gönderiliyor..." : "Sending message...";
+    formMessage.style.color = "#22f7ff";
+
+    const formData = new FormData(contactForm);
+
+    const response = await fetch("/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: new URLSearchParams(formData).toString()
+    });
+
+    if (!response.ok) {
+      throw new Error("Netlify form submission failed.");
+    }
+
+    formMessage.textContent =
+      currentLanguage === "tr"
+        ? "İletim başarılı. En kısa zamanda dönüş yapacağım."
+        : "Message sent successfully. I will reply as soon as possible.";
+    formMessage.style.color = "#44ffb7";
+
+    contactForm.reset();
+  } catch (error) {
+    formMessage.textContent =
+      currentLanguage === "tr"
+        ? "Mesaj gönderilemedi. Lütfen email ile iletişime geç."
+        : "Message could not be sent. Please contact me by email.";
+    formMessage.style.color = "#ff7adf";
+  } finally {
+    submitButton.disabled = false;
+  }
 });
+
+
 
 // Mouse glow and subtle neon triangle parallax.
 window.addEventListener("pointermove", (event) => {

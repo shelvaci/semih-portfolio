@@ -408,7 +408,19 @@
             <h2 data-i18n="contact.title">Bir şey inşa etmeye hazır mısın?</h2>
           </div>
           <div class="contact-grid">
-            <form class="contact-form reveal" id="contactForm" novalidate>
+            
+            <form name="contact" method="POST" data-netlify="true" hidden>
+  <input type="hidden" name="form-name" value="contact" />
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <textarea name="message"></textarea>
+</form>
+
+            <form class="contact-form reveal" id="contactForm" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+              <input type="hidden" name="form-name" value="contact" />
+              <p style="display: none;">
+                <label>Do not fill this field: <input name="bot-field" /></label>
+              </p>
               <label><span data-i18n="form.name">İsim</span><input type="text" id="name" name="name" placeholder="Adın" required data-i18n-placeholder="form.namePlaceholder" /></label>
               <label><span data-i18n="form.email">Email</span><input type="email" id="email" name="email" placeholder="mail@adresin.com" required data-i18n-placeholder="form.emailPlaceholder" /></label>
               <label><span data-i18n="form.message">Mesaj</span><textarea id="message" name="message" rows="6" placeholder="Projen hakkında yaz" required data-i18n-placeholder="form.messagePlaceholder"></textarea></label>

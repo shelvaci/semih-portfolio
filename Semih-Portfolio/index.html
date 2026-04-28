@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Semih Helvacıkara - Yazılımcı, Bilgisayar Mühendisliği öğrencisi, yapay zeka sistemleri, otomasyon, web ve dijital ürün geliştiricisi."
+    />
+    <title>Semih Helvacıkara | Futuristic Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <div class="loader" id="loader">
+      <div class="loader-core">
+        <div class="loader-ring"></div>
+        <p class="loader-title" data-i18n="loader.title">Portfolio Sistemi Başlatılıyor</p>
+        <div class="terminal-loader" aria-label="Loading terminal animation">
+          <span>&gt; boot_semih_dev.exe</span>
+          <span>&gt; loading_engineering_modules</span>
+          <span>&gt; status: online</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fixed glass navigation: active links are updated from JavaScript while scrolling. -->
+    <header class="site-header" id="siteHeader">
+      <nav class="navbar container" aria-label="Primary navigation">
+        <a href="#home" class="logo" aria-label="Semih.dev home">Semih<span>.dev</span></a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-panel" id="navPanel">
+          <a href="#home" class="nav-link active" data-i18n="nav.home">Ana Sayfa</a>
+          <a href="#about" class="nav-link" data-i18n="nav.about">Hakkımda</a>
+          <a href="#skills" class="nav-link" data-i18n="nav.skills">Yetenekler</a>
+          <a href="#projects" class="nav-link" data-i18n="nav.projects">Projeler</a>
+          <a href="#experience" class="nav-link" data-i18n="nav.experience">Deneyim</a>
+          <a href="#contact" class="nav-link" data-i18n="nav.contact">İletişim</a>
+          <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">EN</button>
+          <a href="assets/files/Semih_Helvacikara_CV.pdf" class="resume-btn" data-i18n="nav.resume">CV</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero: neon grid, geometric line art, typing system, social rail, and avatar badge. -->
+      <section class="hero section-grid" id="home">
+        <div class="hero-orbit" id="heroOrbit" aria-hidden="true">
+          <div class="neon-triangle"></div>
+          <div class="triangle-outline triangle-outline-one"></div>
+          <div class="triangle-outline triangle-outline-two"></div>
+        </div>
+
+        <div class="social-rail" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/semih-helvacıkara-4617b11b5" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.35 8h4.3v15.98H.35V8zM8.27 8h4.12v2.18h.06c.58-1.1 2-2.26 4.12-2.26 4.4 0 5.21 2.9 5.21 6.67v9.39h-4.29v-8.32c0-1.98-.04-4.53-2.76-4.53-2.77 0-3.19 2.16-3.19 4.39v8.46H8.27V8z" />
+            </svg>
+          </a>
+          <a href="https://github.com/shelvaci" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.31-5.47-1.34-5.47-5.94 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.56.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.61.24 2.86.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.62-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z" />
+            </svg>
+          </a>
+          <a href="mailto:Semihhelvacikara@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm9 8.1L3.6 7.5v9h16.8v-9L12 13.1zm0-2.4 7.5-5H4.5l7.5 5z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/semihhelvackara/" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="container hero-layout">
+          <div class="hero-copy reveal">
+            <p class="eyebrow" data-i18n="hero.eyebrow">Bilgisayar Mühendisliği / Yazılım / Dijital Ürünler</p>
+            <h1>HELLO WORLD</h1>
+            <h2 data-i18n="hero.name">Ben Semih Helvacıkara</h2>
+            <p class="hero-role" data-i18n="hero.role">Yazılım Geliştirme | Yapay Zeka Sistemleri | Otomasyon | Web, Veri &amp; Dijital Ürünler</p>
+            <p class="typing-line">
+              <span id="typingText">Yapay zeka sistemleri, yazılım ve dijital ürünler geliştiriyorum.</span><span class="typing-caret"></span>
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary" data-i18n="hero.projects">Projeleri Gör</a>
+              <a href="#contact" class="btn btn-ghost" data-i18n="hero.contact">İletişime Geç</a>
+            </div>
+          </div>
+
+          <div class="hero-avatar-wrap reveal">
+            <div class="avatar-halo"></div>
+            <div class="avatar-card">
+              <div class="avatar-initials">SH</div>
+              <div class="avatar-meta">
+                <span data-i18n="hero.status">status: building</span>
+                <span data-i18n="hero.stack">stack: ai / web / data</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#about" class="scroll-indicator" aria-label="Scroll to about">
+          <span></span>
+        </a>
+      </section>
+
+      <!-- About: split story plus a terminal-inspired identity card. -->
+      <section class="about section-pad" id="about">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="about.eyebrow">Kimlik Katmanı</p>
+            <h2 data-i18n="about.title">Hakkımda</h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-story reveal">
+              <p data-i18n="about.copy1">
+                Ben Semih Helvacıkara. Bilgisayar Mühendisliği öğrencisi, yazılımcı ve dijital ürün geliştirme odağında çalışan bir teknoloji üreticisiyim.
+                Web tarafının yanında yapay zeka tabanlı sistemler, otomasyonlar, entegrasyonlar, iş süreçleri ve teknik ürün fikirleri geliştiriyorum.
+              </p>
+              <p data-i18n="about.copy2">
+                Kurumsal ihtiyaçları startup hızında ele almayı seviyorum: problemi anlamak, doğru teknolojiyi seçmek ve fikri kullanılabilir bir dijital ürüne dönüştürmek.
+                Yazılım, yapay zeka sistemleri, otomasyon, siber güvenlik temelleri, IT yönetimi ve dijital büyüme taraflarını tek bir ürün bakışıyla birleştiriyorum.
+              </p>
+              <div class="highlight-grid">
+                <span data-i18n="about.tag1">Bilgisayar Mühendisliği</span>
+                <span data-i18n="about.tag2">Yazılım &amp; Entegrasyon</span>
+                <span data-i18n="about.tag3">AI &amp; Otomasyon</span>
+                <span data-i18n="about.tag4">IT Yönetimi</span>
+                <span data-i18n="about.tag5">Dijital Ürün Geliştirme</span>
+              </div>
+              <div class="about-code-lines" aria-label="Technical focus snippets">
+                <code>build(product)</code>
+                <code>automate(flow)</code>
+                <code>scale(signal)</code>
+              </div>
+            </div>
+            <aside class="identity-card reveal">
+              <div class="card-topline">
+                <span>SEM-DEV-ID</span>
+                <span>ONLINE</span>
+              </div>
+              <div class="terminal-card">
+                <p><b>&gt;</b> profile.scan()</p>
+                <p><b>name:</b> Semih Helvacıkara</p>
+                <p><b>role:</b> <span data-i18n="about.role">Bilgisayar Mühendisliği &amp; Yazılım</span></p>
+                <p><b>focus:</b> <span data-i18n="about.focus">yapay zeka sistemleri, yazılım, otomasyon, entegrasyon, web, veri, dijital ürünler</span></p>
+                <p><b>location:</b> Türkiye</p>
+                <p><b>mission:</b> <span data-i18n="about.mission">fikirlerinizi kullanılabilir, ölçeklenebilir dijital işlere dönüştürmek</span></p>
+              </div>
+              <div class="identity-metrics">
+                <span><b>02</b> degrees in progress</span>
+                <span><b>03</b> work domains</span>
+                <span><b>AI</b> systems mindset</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills: 3D flip cards, hover support for desktop, click support for touch devices. -->
+      <section class="skills section-pad section-grid" id="skills">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="skills.eyebrow">Teknik Yetkinlikler</p>
+            <h2 data-i18n="skills.title">Yazılım, Ürün ve Teknoloji Becerileri</h2>
+          </div>
+          <div class="skills-grid">
+            <article class="skill-card reveal" tabindex="0">
+              <div class="skill-inner"><div class="skill-front"><span>HTML</span><b>01</b></div><div class="skill-back"><h3 data-i18n="skill.advanced">Advanced</h3><p data-i18n="skill.html">Semantic structure, accessibility, SEO-ready markup, and clean page architecture.</p></div></div>
+            </article>
+            <article class="skill-card reveal" tabindex="0">
+              <div class="skill-inner"><div class="skill-front"><span>CSS</span><b>02</b></div><div class="skill-back"><h3 data-i18n="skill.advanced">Advanced</h3><p data-i18n="skill.css">Responsive layouts, animation systems, glassmorphism, and polished interface details.</p></div></div>
+            </article>
+            <article class="skill-card reveal" tabindex="0">
+              <div class="skill-inner"><div class="skill-front"><span>JavaScript</span><b>03</b></div><div class="skill-back"><h3 data-i18n="skill.intermediate">Intermediate</h3><p data-i18n="skill.js">Interactive UI logic, validation, DOM systems, and frontend application behavior.</p></div></div>
+            </article>
+            <article class="skill-card reveal" tabindex="0">
+              <div class="skill-inner"><div class="skill-front"><span>React</span><b>04</b></div><div class="skill-back"><h3 data-i18n="skill.learning">Learning / Intermediate</h3><p data-i18n="skill.react">Component-based interfaces, reusable UI patterns, stateful views, and app thinking.</p></div></div>
+            </article>
+            <article class="skill-card reveal" tabindex="0">
+              <div class="skill-inner"><div class="skill-front"><span>Node.js</span><b>05</b></div><div class="skill-back"><h3 data-i18n="skill.intermediate">Intermediate</h3><p data-i18n="skill.node">Backend routes, API structure, server-side logic, and product-oriented integrations.</p></div></div>
+            </article>
+            <article class="skill-card reveal" tabindex="0">
+              <div class="skill-inner"><div class="skill-front"><span>Python</span><b>06</b></div><div class="skill-back"><h3 data-i18n="skill.intermediate">Intermediate</h3><p data-i18n="skill.python">Automation, data processing, scripts, AI experiments, and backend utility workflows.</p></div></div>
+            </article>
+            <article class="skill-card reveal" tabindex="0">
+              <div class="skill-inner"><div class="skill-front"><span>SQL / PostgreSQL</span><b>07</b></div><div class="skill-back"><h3 data-i18n="skill.intermediate">Intermediate</h3><p data-i18n="skill.sql">Relational data modeling, queries, application data flows, and reporting foundations.</p></div></div>
+            </article>
+            <article class="skill-card reveal" tabindex="0">
+              <div class="skill-inner"><div class="skill-front"><span>WordPress</span><b>08</b></div><div class="skill-back"><h3 data-i18n="skill.advanced">Advanced</h3><p data-i18n="skill.wordpress">Business websites, CMS workflows, page structure, content updates, and launch support.</p></div></div>
+            </article>
+            <article class="skill-card reveal" tabindex="0">
+              <div class="skill-inner"><div class="skill-front"><span>Git &amp; GitHub</span><b>09</b></div><div class="skill-back"><h3 data-i18n="skill.intermediate">Intermediate</h3><p data-i18n="skill.git">Version control, repository workflows, project organization, and code collaboration basics.</p></div></div>
+            </article>
+            <article class="skill-card reveal" tabindex="0">
+              <div class="skill-inner"><div class="skill-front"><span>AI Systems</span><b>10</b></div><div class="skill-back"><h3 data-i18n="skill.advanced">Advanced</h3><p data-i18n="skill.ai">Yapay zeka sistemlerini ürün geliştirme, otomasyon, analiz ve teknik prototipleme süreçlerine uygulama.</p></div></div>
+            </article>
+            <article class="skill-card reveal" tabindex="0">
+              <div class="skill-inner"><div class="skill-front"><span>Cybersecurity Basics</span><b>11</b></div><div class="skill-back"><h3 data-i18n="skill.intermediate">Intermediate</h3><p data-i18n="skill.cyber">Network security awareness, intrusion detection concepts, and secure development habits.</p></div></div>
+            </article>
+            <article class="skill-card reveal" tabindex="0">
+              <div class="skill-inner"><div class="skill-front"><span>UI/UX Design</span><b>12</b></div><div class="skill-back"><h3 data-i18n="skill.intermediate">Intermediate</h3><p data-i18n="skill.ui">Visual hierarchy, user flows, interface polish, and product presentation systems.</p></div></div>
+            </article>
+            <article class="skill-card reveal" tabindex="0">
+              <div class="skill-inner"><div class="skill-front"><span>Video Editing &amp; Post-Production</span><b>13</b></div><div class="skill-back"><h3 data-i18n="skill.intermediate">Intermediate</h3><p data-i18n="skill.video">Kurgu, ritim, sosyal medya içerikleri, temel renk/ses düzenleme ve yayın formatına hazırlama.</p></div></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects: each card uses a different interface metaphor instead of a repeated plain grid. -->
+      <section class="projects section-pad" id="projects">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="projects.eyebrow">Seçili Projeler</p>
+            <h2 data-i18n="projects.title">Geliştirdiğim Ürün ve Sistemler</h2>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card project-terminal reveal">
+              <div class="terminal-screen">
+                <span>security@semih:~$ monitor --live</span>
+                <div class="pulse-line"></div>
+                <p>threat_score: 0.87</p>
+                <p>packet_stream: analyzing</p>
+              </div>
+              <div class="project-content">
+                <p class="project-type" data-i18n="project1.type">AI + Siber Güvenlik</p>
+                <h3>NIDS - Network Intrusion Detection System</h3>
+                <p data-i18n="project1.desc">Şüpheli ağ trafiğini makine öğrenmesiyle tespit etmeye odaklanan gerçek zamanlı intrusion detection sistemi.</p>
+                <code class="micro-code">scan.threat()</code>
+                <div class="tech-list"><span>Python</span><span>Flask</span><span>Machine Learning</span><span>JavaScript</span></div>
+                <div class="project-actions"><a href="https://github.com/shelvaci" data-i18n="project.action.github">GitHub'a Git</a></div>
+              </div>
+            </article>
+
+            <article class="project-card project-dashboard reveal">
+              <div class="dashboard-ui">
+                <div class="dash-bar"></div><div class="dash-chart"></div><div class="dash-list"></div>
+              </div>
+              <div class="project-content">
+                <p class="project-type" data-i18n="project2.type">Yönetim Uygulaması</p>
+                <h3>CafeApp</h3>
+                <p data-i18n="project2.desc">Ürün, sipariş ve kullanıcı yönetimi özellikleri olan cafe yönetim uygulaması.</p>
+                <code class="micro-code">orders.sync()</code>
+                <div class="tech-list"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>PostgreSQL</span></div>
+                <div class="project-actions"><a href="https://github.com/shelvaci" data-i18n="project.action.github">GitHub'a Git</a><a href="#" class="pending-link" data-i18n="project.action.demo">Demo Gör</a></div>
+              </div>
+            </article>
+
+            <article class="project-card project-lifedeck reveal">
+              <div class="lifedeck-ui">
+                <div class="life-panel tasks-panel">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="life-panel budget-panel">
+                  <strong></strong><i></i>
+                </div>
+                <div class="life-panel focus-panel"></div>
+              </div>
+              <div class="project-content">
+                <p class="project-type" data-i18n="project6.type">Kişisel Yönetim Uygulaması</p>
+                <h3>LifeDeck</h3>
+                <p data-i18n="project6.desc">Görevler, bütçe takibi, kişisel planlama ve günlük üretkenlik akışlarını tek panelde toplayan masaüstü uygulaması.</p>
+                <code class="micro-code">life.track()</code>
+                <div class="tech-list"><span>Electron</span><span>JavaScript</span><span>Local JSON</span><span>Task Flow</span><span>Budget Tracking</span></div>
+                <div class="project-actions"><a href="https://github.com/shelvaci" data-i18n="project.action.github">GitHub'a Git</a></div>
+              </div>
+            </article>
+
+            <article class="project-card project-browser reveal">
+              <div class="browser-ui">
+                <div class="browser-top"><span></span><span></span><span></span></div>
+                <div class="browser-hero"></div>
+                <div class="browser-row"></div>
+              </div>
+              <div class="project-content">
+                <p class="project-type" data-i18n="project3.type">Kurumsal Web Sitesi</p>
+                <h3>Gaziantep Dernegi Website</h3>
+                <p data-i18n="project3.desc">Proje sayfaları, haber yapısı ve iletişim kurgusu olan çok dilli Erasmus+ dernek sitesi.</p>
+                <code class="micro-code">locale.deploy()</code>
+                <div class="tech-list"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span></div>
+                <div class="project-actions"><a href="https://github.com/shelvaci" data-i18n="project.action.github">GitHub'a Git</a><a href="#" class="pending-link" data-i18n="project.action.demo">Demo Gör</a></div>
+              </div>
+            </article>
+
+            <article class="project-card project-analytics reveal">
+              <div class="analytics-ui">
+                <div class="metric-card"></div><div class="metric-card tall"></div><div class="metric-card"></div>
+              </div>
+              <div class="project-content">
+                <p class="project-type" data-i18n="project4.type">Data / Otomasyon Aracı</p>
+                <h3>E-Commerce Intelligence Tool</h3>
+                <p data-i18n="project4.desc">Ürün tarama, pazar verisi toplama ve e-ticaret fırsatlarını puanlama üzerine çalışan analiz aracı.</p>
+                <code class="micro-code">market.score()</code>
+                <div class="tech-list"><span>Python</span><span>CSV</span><span>Data Analysis</span></div>
+                <div class="project-actions"><a href="https://github.com/shelvaci" data-i18n="project.action.github">GitHub'a Git</a></div>
+              </div>
+            </article>
+
+            <article class="project-card project-phone reveal">
+              <div class="phone-ui">
+                <div class="phone-notch"></div><div class="phone-card"></div><div class="phone-button"></div>
+              </div>
+              <div class="project-content">
+                <p class="project-type" data-i18n="project5.type">Startup / Mobil Uygulama Konsepti</p>
+                <h3>Perkify Loyalty App</h3>
+                <p data-i18n="project5.desc">Kafeler ve küçük işletmeler için tasarlanan QR tabanlı sadakat ve müşteri etkileşim platformu.</p>
+                <p class="project-note" data-i18n="project5.note">Bu proje ile TÜBİTAK başvurusu yapılmıştır.</p>
+                <code class="micro-code">qr.loyalty()</code>
+                <div class="tech-list"><span>Flutter</span><span>Node.js</span><span>PostgreSQL</span><span>AI concept</span></div>
+                <div class="project-actions"><a href="https://github.com/shelvaci" data-i18n="project.action.github">GitHub'a Git</a></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience: circuit-like vertical timeline for education, projects, AI, and business work. -->
+      <section class="experience section-pad section-grid" id="experience">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="experience.eyebrow">Deneyim Devresi</p>
+            <h2 data-i18n="experience.title">İş, Eğitim ve Teknoloji Sinyali</h2>
+          </div>
+          <div class="experience-console">
+            <article class="experience-card experience-card-feature reveal">
+              <div class="experience-node"></div>
+              <div class="experience-meta"><span>05/2025 - 04/2026</span><code>ops.deploy()</code></div>
+              <h3>IT Manager - Uğurlu Group Hotels</h3>
+              <p data-i18n="exp1.desc">Otel ve bağlı işletmeler için web siteleri, dijital çözümler, teknoloji danışmanlığı, SEO/online reklam çalışmaları ve ekip koordinasyonu.</p>
+              <ul>
+                <li data-i18n="exp1.b1">Otel ve grup markaları için web/dijital altyapı üretimi</li>
+                <li data-i18n="exp1.b2">SEO, reklam ve performans odaklı dijital pazarlama çalışmaları</li>
+                <li data-i18n="exp1.b3">Departmanlar arası teknik ihtiyaç analizi ve çözüm uygulama</li>
+              </ul>
+            </article>
+            <article class="experience-card reveal">
+              <div class="experience-node"></div>
+              <div class="experience-meta"><span>02/2024 - 03/2025</span><code>team.route()</code></div>
+              <h3>Developer and Group Director - OCTA WORKS A.Ş</h3>
+              <p data-i18n="exp2.desc">İş operasyonları, çapraz fonksiyonlu ekip yönetimi, departmanlar arası dijital çözüm uygulamaları ve proje yürütme sorumlulukları.</p>
+            </article>
+            <article class="experience-card reveal">
+              <div class="experience-node"></div>
+              <div class="experience-meta"><span>07/2022 - 01/2024</span><code>api.connect()</code></div>
+              <h3>Developer - ILGIZAN Electronic Services and Trade</h3>
+              <p data-i18n="exp3.desc">AI destekli masaüstü asistan uygulaması, Kali Linux ile siber güvenlik çalışmaları, API entegrasyonları, entegrasyon sistemleri ve e-ticaret sitesi geliştirme.</p>
+            </article>
+            <article class="experience-card reveal">
+              <div class="experience-node"></div>
+              <div class="experience-meta"><span>2020 - Present</span><code>learn.loop()</code></div>
+              <h3 data-i18n="exp4.title">Computer Engineering + Management Information Systems</h3>
+              <p data-i18n="exp4.desc">Hasan Kalyoncu Üniversitesi Bilgisayar Mühendisliği ve İstanbul Üniversitesi Yönetim Bilişim Sistemleri lisans eğitimleri.</p>
+            </article>
+            <article class="experience-card reveal">
+              <div class="experience-node"></div>
+              <div class="experience-meta"><span>Projects / Certificates</span><code>ai.optimize()</code></div>
+              <h3 data-i18n="exp5.title">Erasmus+, Hackathon and AI Projects</h3>
+              <p data-i18n="exp5.desc">Youthpass sertifikaları, Erasmus+ youth exchange deneyimi ve lojistik şirketleri için en karlı sevkiyat rotalarını belirleyen AI destekli hackathon projesi.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats: counters animate once when this section enters the viewport. -->
+      <section class="stats section-pad">
+        <div class="container stats-grid">
+          <div class="stat-card reveal"><strong data-count="25" data-prefix="+">0</strong><span data-i18n="stat1">Erasmus+ Projesi</span></div>
+          <div class="stat-card reveal"><strong class="stat-symbol">+∞</strong><span data-i18n="stat2">Dijital Proje</span></div>
+          <div class="stat-card reveal"><strong data-count="5" data-prefix="+">0</strong><span data-i18n="stat3">Web Uygulaması</span></div>
+          <div class="stat-card reveal"><strong data-count="2" data-prefix="+">0</strong><span data-i18n="stat4">AI / Otomasyon Konsepti</span></div>
+          <div class="stat-card reveal"><strong data-count="100" data-suffix="K+">0</strong><span data-i18n="stat5">Kampanya Erişimi</span></div>
+        </div>
+      </section>
+
+      <!-- Resume CTA: classic CV route for recruiters who prefer a document format. -->
+      <section class="resume-cta section-pad">
+        <div class="container resume-panel reveal">
+          <div>
+            <p class="eyebrow" data-i18n="resume.eyebrow">Klasik Mod</p>
+            <h2 data-i18n="resume.title">Klasik versiyonu ister misin?</h2>
+          </div>
+          <div class="resume-actions">
+            <a class="btn btn-primary" href="assets/files/Semih_Helvacikara_CV.pdf" data-i18n="resume.download">CV İndir</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/semih-helvacıkara-4617b11b5" data-i18n="resume.linkedin">LinkedIn Gör</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact: frontend-only form with validation and terminal control-panel styling. -->
+      <section class="contact section-pad section-grid" id="contact">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="contact.eyebrow">İletişim Kontrol Paneli</p>
+            <h2 data-i18n="contact.title">Bir şey inşa etmeye hazır mısın?</h2>
+          </div>
+          <div class="contact-grid">
+            <form class="contact-form reveal" id="contactForm" novalidate>
+              <label><span data-i18n="form.name">İsim</span><input type="text" id="name" name="name" placeholder="Adın" required data-i18n-placeholder="form.namePlaceholder" /></label>
+              <label><span data-i18n="form.email">Email</span><input type="email" id="email" name="email" placeholder="mail@adresin.com" required data-i18n-placeholder="form.emailPlaceholder" /></label>
+              <label><span data-i18n="form.message">Mesaj</span><textarea id="message" name="message" rows="6" placeholder="Projen hakkında yaz" required data-i18n-placeholder="form.messagePlaceholder"></textarea></label>
+              <button class="btn btn-primary" type="submit" data-i18n="form.send">Mesaj Gönder</button>
+              <p class="form-message" id="formMessage" role="status"></p>
+            </form>
+            <div class="contact-panel reveal">
+              <div class="terminal-title">connection.log</div>
+              <p data-i18n="contact.ready">&gt; Bir şey inşa etmeye hazır mısın?</p>
+              <a href="mailto:Semihhelvacikara@gmail.com">Email: Semihhelvacikara@gmail.com</a>
+              <a href="https://www.linkedin.com/in/semih-helvacıkara-4617b11b5">LinkedIn: semih-helvacıkara</a>
+              <a href="https://github.com/shelvaci">GitHub: github.com/shelvaci</a>
+              <a href="https://www.instagram.com/semihhelvackara/">Instagram: @semihhelvackara</a>
+              <a href="tel:+905334530354">Telefon: +90 533 453 03 54</a>
+              <span data-i18n="contact.location">Konum: Türkiye</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>Copyright <span id="year"></span> Semih Helvacıkara. <span data-i18n="footer.rights">Tüm hakları saklıdır.</span></p>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
